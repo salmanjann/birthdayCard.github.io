@@ -1,0 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Pacifico';
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+
+    /* variables */
+    --cardHeight: 500px;
+    --cardWidth: 350px;
+}
+
+main {
+    width: 100vw;
+    height: 100vh;
+    background-color: #48acf0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.birthdayCard {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+    transform-style: preserve-3d;
+    transform: perspective(2500deg);
+    transition: 1s;
+    position: relative;
+}
+
+.cardFront {
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    background-color: rgb(255, 255, 255);
+
+    position: relative;
+    transform-origin: left;
+    transition: 0.6s;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cardInside {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: var(--cardWidth);
+    height: var(--cardHeight);
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: -1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    padding: 5%;
+    border-left: 1px solid grey;
+}
+
+.birthdayCard:hover {
+    transform: perspective(2500px) rotate(5deg);
+}
+
+.birthdayCard:hover .cardFront {
+    transform: rotateY(-160deg);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.4);
+
+}
+
+.birthdayCard:hover .cardFront .textbox {
+    display: none;
+}
+
+.bdayCake {
+    width: 40%;
+    height: 30%;
+    background-image: url(birthday.svg);
+    background-size: cover;
+}
+
+.textbox {
+    width: 40%;
+    height: auto;
+    text-align: center;
+    transition: 1s;
+}
+
+.ballons {
+    width: 40%;
+    height: 30%;
+    background-image: url(ballons.svg);
+    background-size: cover;
+}
+
+.cardInside h2 {
+    font-family: 'Edu SA Beginner';
+}
+
+.cardInside p {
+    font-family: 'Kalam';
+    width: 80%;
+}

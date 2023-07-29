@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Card</title>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Edu SA Beginner' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Kalam' rel='stylesheet'>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- No header or footer direct main -->
+    <main>
+        <div class="birthdayCard">
+            <div class="cardFront">
+                <div class="ballons"></div>
+                <div class="bdayCake"></div>
+                <div class="textbox">
+                    <h2>Happy</h2>
+                    <h1>Birthday</h1>
+                    <h2>To You!</h2>
+                </div>
+
+            </div>
+            <div class="cardInside">
+                <h2> Happy Birthday</h2>
+                <div class="wishbox">
+                    <p class="dear">Dear Mahrukh,</p>
+                    <p class="wish">
+                        May Allah Ta'Allah give you all the happiness and joy of this world and hereafter, I won't write
+                        long paragraphs, lekin itna zaroor kahonga, aap aaj bhi mery liye otni hi eham hain jitni pehly
+                        thin. Allah Ta'Allah apko hmesha khush or kamiyab rakhein, or hmari dosti hmesha qaim rakhein,
+                        Aameen!
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="confetti.js"></script>
+    <!-- Confetti  JS-->
+    <script>
+
+        // start
+
+        const start = () => {
+            setTimeout(function () {
+                confetti.start()
+            }, 1000); // 1000 is time that after 1 second start the confetti ( 1000 = 1 sec)
+        };
+
+        //  Stop
+
+        const stop = () => {
+            setTimeout(function () {
+                confetti.stop()
+            }, 7000); // 5000 is time that after 5 second stop the confetti ( 5000 = 5 sec)
+        };
+
+        start();
+        stop();
+    </script>
+</body>
+
+</html>
